@@ -13,39 +13,39 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = MyBlazorApp
 build_property.RootNamespace = MyBlazorApp
-build_property.ProjectDir = C:\code\blaz_frontend\MyBlazorApp\
+build_property.ProjectDir = c:\code\blaz_frontend\MyBlazorApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = false
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\code\blaz_frontend\MyBlazorApp
+build_property.MSBuildProjectDirectory = c:\code\blaz_frontend\MyBlazorApp
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/code/blaz_frontend/MyBlazorApp/App.razor]
+[c:/code/blaz_frontend/MyBlazorApp/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/code/blaz_frontend/MyBlazorApp/Pages/Counter.razor]
+[c:/code/blaz_frontend/MyBlazorApp/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/code/blaz_frontend/MyBlazorApp/Pages/Home.razor]
+[c:/code/blaz_frontend/MyBlazorApp/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/code/blaz_frontend/MyBlazorApp/Pages/Weather.razor]
+[c:/code/blaz_frontend/MyBlazorApp/Pages/Weather.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2VhdGhlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/code/blaz_frontend/MyBlazorApp/_Imports.razor]
+[c:/code/blaz_frontend/MyBlazorApp/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/code/blaz_frontend/MyBlazorApp/Layout/MainLayout.razor]
+[c:/code/blaz_frontend/MyBlazorApp/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-pv57ownmzj
 
-[C:/code/blaz_frontend/MyBlazorApp/Layout/NavMenu.razor]
+[c:/code/blaz_frontend/MyBlazorApp/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-soj9rbgjfe

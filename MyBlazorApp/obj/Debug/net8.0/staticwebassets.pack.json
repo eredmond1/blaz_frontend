@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\MyBlazorApp.styles.css"
     },
     {
+      "Id": "C:\\code\\blaz_frontend\\MyBlazorApp\\wwwroot\\css\\Home.css",
+      "PackagePath": "staticwebassets\\css\\Home.css"
+    },
+    {
       "Id": "C:\\code\\blaz_frontend\\MyBlazorApp\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },

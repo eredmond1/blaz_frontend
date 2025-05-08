@@ -4,40 +4,43 @@
 @using MyBlazorApp.Services
 @inject StockService StockService
 
-<PageTitle>Home</PageTitle>
-<link href="../Styles/Home.css" rel="stylesheet"/>
-
-<h1>Hello, world!</h1>
-@if (Stocks != null && Stocks.Any())
-{
-<table>
-    <thead>
-        <tr>
-            <th>symbol</th>
-            <th>company name</th>
-            <th>purchase</th>
-            <th>Last Div</th>
-            <th>indestry</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach(Stock stock in Stocks)
-        {
+<PageTitle>Your stocks</PageTitle>
+<link href="css/Home.css" rel="stylesheet"/>
+<div class="center-container">
+    <div class="title-background">
+        <h1>Your Stocks</h1>
+    </div>
+    @if (Stocks != null && Stocks.Any())
+    {
+    <table>
+        <thead>
             <tr>
-                <td>@stock.Symbol</td>
-                <td>@stock.CompanyName</td>
-                <td>@stock.Purchase</td>
-                <td>@stock.LastDiv</td>
-                <td>@stock.Indestry</td>
+                <th>symbol</th>
+                <th>company name</th>
+                <th>purchase</th>
+                <th>Last Div</th>
+                <th>indestry</th>
             </tr>
-        }
-    </tbody>
-</table>
-}
-else
-{
-<p>there are no stocks</p>
-}
+        </thead>
+        <tbody>
+            @foreach(Stock stock in Stocks)
+            {
+                <tr>
+                    <td>@stock.Symbol</td>
+                    <td>@stock.CompanyName</td>
+                    <td>@stock.Purchase</td>
+                    <td>@stock.LastDiv</td>
+                    <td>@stock.Indestry</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    }
+    else
+    {
+    <p>there are no stocks</p>
+    }
+</div>
 
 @code{
     private List<Stock>? Stocks;
