@@ -1,7 +1,72 @@
 ﻿@page "/"
+@using MyBlazorApp.Models
+@using Microsoft.AspNetCore.Components
 
 <PageTitle>Home</PageTitle>
 
 <h1>Hello, world!</h1>
+@if (Stocks != null && Stocks.Any())
+{
+<table>
+    <thead>
+        <tr>
+            <th>symbol</th>
+            <th>company name</th>
+            <th>purchase</th>
+            <th>Last Div</th>
+            <th>indestry</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Stock stock in Stocks)
+        {
+            <tr>
+                <td>@stock.Symbol</td>
+                <td>@stock.CompanyName</td>
+                <td>@stock.Purchase</td>
+                <td>@stock.LastDiv</td>
+                <td>@stock.Indestry</td>
+            </tr>
+        }
+    </tbody>
+</table>
+}
+else
+{
+<p>there are no stocks</p>
+}
 
-Welcome to your new app.
+@code{
+    private List<Stock>? Stocks;
+
+    protected override void OnInitialized()
+    {
+        Stocks = new List<Stock>
+        {
+            new Stock
+            {
+                Symbol = "AAPL",
+                CompanyName = "Apple Inc.",
+                Purchase = 320,
+                LastDiv = 1,
+                Indestry = "tech"
+            },
+            new Stock
+            {
+                Symbol = "TSLA",
+                CompanyName = "Tesla Inc.",
+                Purchase = 180,
+                LastDiv = 0,
+                Indestry = "makingcars"
+            },
+            new Stock
+            {
+                Symbol = "TSLA",
+                CompanyName = "Tesla Inc.",
+                Purchase = 180,
+                LastDiv = 0,
+                Indestry = "automotive"
+            }
+        };
+    }
+}
