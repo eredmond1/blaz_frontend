@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vAfxjpx6ou0QcWTXoLZNkNHevMTT1/fAhicxE75mqVc=",
+  "Hash": "WZUMPauIB/hzzXPhOSWiIqwM/rN0KumRVjMKRTypQkM=",
   "Source": "MyBlazorApp",
   "BasePath": "/",
   "Mode": "Root",
@@ -7881,6 +7881,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Home.css"
+    },
+    {
+      "Identity": "C:\\code\\blaz_frontend\\MyBlazorApp\\wwwroot\\css\\PostStock.css",
+      "SourceId": "MyBlazorApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\code\\blaz_frontend\\MyBlazorApp\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/PostStock.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\PostStock.css"
     },
     {
       "Identity": "C:\\code\\blaz_frontend\\MyBlazorApp\\wwwroot\\favicon.png",

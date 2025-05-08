@@ -20,5 +20,26 @@ namespace MyBlazorApp.Services
         {
             return await _httpClient.GetFromJsonAsync<List<Stock>>("api/stock");
         }
+
+        public async Task<Stock> AddStockAsync(Stock stock)
+        {
+            var response = await _httpClient.PostAsJsonAsync("api/stock", stock);
+
+            if(response.IsSuccessStatusCode)
+            {
+                var result =  await response.Content.ReadFromJsonAsync<Stock>();
+                if(result  ==  null)
+                {
+                    throw new Exception("the api could not prossess the data");
+                }
+
+                return result;
+            }
+            else
+            {
+        // Handle errors (e.g., throw an exception or return a default value)
+                throw new Exception($"Failed to add stock: {response.ReasonPhrase}");
+            }
+        }
     }
 }

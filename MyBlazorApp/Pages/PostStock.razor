@@ -1,0 +1,80 @@
+@page "/post_stock"
+@using MyBlazorApp.Models
+@using Microsoft.AspNetCore.Components
+@using MyBlazorApp.Services
+@using Microsoft.AspNetCore.Components.Forms
+
+@inject StockService StockService
+
+
+<PageTitle>Post Stocks</PageTitle>
+
+
+<link href="css/PostStock.css" rel="stylesheet"/>
+
+
+<div class="center-container">
+    <div class="title-background">
+        <h1>Add a Stock</h1>
+    </div>
+    <div class="form-container">
+        <EditForm Model="@stock" OnSubmit="@HandleSubmit">
+            
+            <div>
+                <label for="Symbol">Stock Symbol:</label>
+                <InputText id="Symbol" @bind-Value="stock.Symbol"></InputText>
+            </div>
+    
+            <div>
+                <label for="CompanyName">Company Name:</label>
+                <InputText id="CompanyName" @bind-Value="stock.CompanyName"></InputText>
+        
+            </div>
+            <div>
+                <label for="Purchase">Purchase:</label>
+                <InputNumber id="Purchase" @bind-Value= "stock.Purchase"></InputNumber>
+            </div>
+    
+           <div>
+                <label for="LastDiv">Last Dividend:</label>
+                <InputNumber id="LastDiv" @bind-Value="stock.LastDiv"></InputNumber>
+           </div>
+    
+            <div>
+                <label for="Indestry">Indestry:</label>
+                <InputText id="Indestry" @bind-Value="stock.Indestry"></InputText>
+            </div>
+
+            <div>
+                <label for="MarketCap">MarketCap:</label>
+                <InputNumber id="MarketCap" @bind-Value="stock.MarketCap"></InputNumber>
+            </div>
+    
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </EditForm>
+    </div>
+
+</div>
+
+@code{
+    public Stock stock= new();
+
+    public async Task HandleSubmit(EditContext context)
+    {
+        try
+        {
+            var addedStock = await StockService.AddStockAsync(stock);
+            stock = new Stock();
+            Console.WriteLine("your stock has been added");
+
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        
+    }
+
+}
+
