@@ -1,6 +1,8 @@
 ﻿@page "/"
 @using MyBlazorApp.Models
 @using Microsoft.AspNetCore.Components
+@using MyBlazorApp.Services
+@inject StockService StockService
 
 <PageTitle>Home</PageTitle>
 
@@ -39,34 +41,14 @@ else
 @code{
     private List<Stock>? Stocks;
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        Stocks = new List<Stock>
-        {
-            new Stock
-            {
-                Symbol = "AAPL",
-                CompanyName = "Apple Inc.",
-                Purchase = 320,
-                LastDiv = 1,
-                Indestry = "tech"
-            },
-            new Stock
-            {
-                Symbol = "TSLA",
-                CompanyName = "Tesla Inc.",
-                Purchase = 180,
-                LastDiv = 0,
-                Indestry = "makingcars"
-            },
-            new Stock
-            {
-                Symbol = "TSLA",
-                CompanyName = "Tesla Inc.",
-                Purchase = 180,
-                LastDiv = 0,
-                Indestry = "automotive"
-            }
-        };
+        await LoadData();
     }
+
+    private async Task LoadData()
+    {
+        Stocks = await StockService.GetStocksAsync();            
+    }
+    
 }
