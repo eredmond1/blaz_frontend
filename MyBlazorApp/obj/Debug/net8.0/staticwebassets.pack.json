@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\css\\PostStock.css"
     },
     {
+      "Id": "C:\\code\\blaz_frontend\\MyBlazorApp\\wwwroot\\css\\UpdateStock.css",
+      "PackagePath": "staticwebassets\\css\\UpdateStock.css"
+    },
+    {
       "Id": "C:\\code\\blaz_frontend\\MyBlazorApp\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },

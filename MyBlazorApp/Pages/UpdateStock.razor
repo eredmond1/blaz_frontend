@@ -1,10 +1,11 @@
-@page "/post_stock"
+@page "/stock/update/{stockId:int}"
 @using MyBlazorApp.Models
 @using Microsoft.AspNetCore.Components
 @using MyBlazorApp.Services
 @using Microsoft.AspNetCore.Components.Forms
-
+@inject NavigationManager NavigationManager
 @inject StockService StockService
+
 
 
 <PageTitle>Post Stocks</PageTitle>
@@ -15,7 +16,7 @@
 
 <div class="center-container">
     <div class="title-background">
-        <h1>Add a Stock</h1>
+        <h1>Update Your Stock</h1>
     </div>
     <div class="form-container">
         <EditForm Model="@stock" OnSubmit="@HandleSubmit">
@@ -67,29 +68,34 @@
 
 </div>
 
+
 @code{
+    [Parameter]
+    public int stockId {get; set; }
     public Stock stock= new();
 
-    private string statusMessage = string.Empty;
+    public string ?statusMessage;
 
-    public async Task HandleSubmit(EditContext context)
+     private void RouteToHome()
     {
+        NavigationManager.NavigateTo("/");
+    }
+
+     public async Task HandleSubmit(EditContext context)
+     {
         try
         {
-            var addedStock = await StockService.AddStockAsync(stock);
+            var updatedStock = await StockService.UpdateStockAsync(stockId, stock);
             stock = new Stock();
-            statusMessage = "your stock has been added";
+            statusMessage = "your stock has been updated";
             Console.WriteLine(statusMessage);
-            
-
+            RouteToHome();
         }
+
         catch(Exception ex)
         {
             statusMessage = ex.Message;
             Console.WriteLine(statusMessage);
         }
-        
-    }
-
-}
-
+     }
+}    

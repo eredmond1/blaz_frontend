@@ -41,5 +41,25 @@ namespace MyBlazorApp.Services
                 throw new Exception($"Failed to add stock: {response.ReasonPhrase}");
             }
         }
+
+
+        public async Task<Stock> UpdateStockAsync(int ID, Stock stock){
+            var response = await _httpClient.PutAsJsonAsync($"api/stock/{ID}",stock);
+
+            if(response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadFromJsonAsync<Stock>();
+                if(result == null)
+                {
+                    throw new Exception("the api could not process the data");
+                }
+                return result;
+
+            }
+            else
+            {
+                throw new Exception($"Failed to add stock: {response.ReasonPhrase}");
+            }
+        }
     }
 }

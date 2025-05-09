@@ -3,6 +3,7 @@
 @using Microsoft.AspNetCore.Components
 @using MyBlazorApp.Services
 @inject StockService StockService
+@inject NavigationManager NavigationManager
 @using Microsoft.AspNetCore.Components.Web
 
 <PageTitle>Your stocks</PageTitle>
@@ -32,6 +33,9 @@
                     <td>@stock.Purchase</td>
                     <td>@stock.LastDiv</td>
                     <td>@stock.Indestry</td>
+                    <td>
+                        <button @onclick="() =>RouteToStockUpdate(stock.ID)" class="btn btn-primary">update</button>
+                    </td>
                 </tr>
             }
         </tbody>
@@ -54,6 +58,11 @@
     private async Task LoadData()
     {
         Stocks = await StockService.GetStocksAsync();            
+    }
+
+    private void RouteToStockUpdate(int stockId)
+    {
+        NavigationManager.NavigateTo($"/stock/update/{stockId}");
     }
     
 }
