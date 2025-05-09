@@ -1,0 +1,30 @@
+@using MyBlazorApp.Models
+@using Microsoft.AspNetCore.Components
+@using MyBlazorApp.Services
+@inject StockService StockService
+@inject NavigationManager NavigationManager
+@using Microsoft.AspNetCore.Components.Web
+
+<link href="css/Home.css" rel="stylesheet"/>
+<tr>
+    
+    <td>@Stock.Symbol</td>
+    <td>@Stock.CompanyName</td>
+    <td>@Stock.Purchase</td>
+    <td>@Stock.LastDiv</td>
+    <td>@Stock.Indestry</td>
+    <td>
+        <button @onclick="() =>RouteToStockUpdate(Stock.ID)" class="btn btn-primary">update</button>
+    </td>
+</tr>
+
+
+@code{
+
+    [Parameter]
+    public Stock Stock {get; set; }= default!;
+      private void RouteToStockUpdate(int stockId)
+    {
+        NavigationManager.NavigateTo($"/stock/update/{stockId}");
+    }
+}

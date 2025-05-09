@@ -27,16 +27,7 @@
         <tbody>
             @foreach(Stock stock in Stocks)
             {
-                <tr>
-                    <td>@stock.Symbol</td>
-                    <td>@stock.CompanyName</td>
-                    <td>@stock.Purchase</td>
-                    <td>@stock.LastDiv</td>
-                    <td>@stock.Indestry</td>
-                    <td>
-                        <button @onclick="() =>RouteToStockUpdate(stock.ID)" class="btn btn-primary">update</button>
-                    </td>
-                </tr>
+                <StockRow Stock="stock"></StockRow>
             }
         </tbody>
     </table>

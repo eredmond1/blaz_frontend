@@ -38,6 +38,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdFN0b2NrLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/code/blaz_frontend/MyBlazorApp/Pages/StockRow.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RvY2tSb3cucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/code/blaz_frontend/MyBlazorApp/Pages/UpdateStock.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXBkYXRlU3RvY2sucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
